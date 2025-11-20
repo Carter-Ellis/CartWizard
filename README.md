@@ -1,17 +1,16 @@
 🛒 CartWizard 🧙‍♂️
 AI-Powered Supermarket Web Application (Python, Django, PostgreSQL)
 
-🚀 CartWizard is a full-stack supermarket web application built with Python, Django, and PostgreSQL. It allows users to browse products, add items to their cart, and later will include an AI-powered cart summary using an LLM API.
-This project is being built as a hands-on way to practice full-stack web development, database modeling, Python OOP, and eventually AI integration.
+🚀 CartWizard is a full-stack supermarket web application built with Python, Django, and PostgreSQL. It allows users to browse products, add items to their cart, and includes an AI-powered cart summary using an LLM API to suggest recipes.
+This project is being built as a hands-on way to practice full-stack web development, database modeling, Python OOP, and AI integration.
 
 ---------------------------------------
-🧠 Features (Planned and In Progress)
+🧠 Features
 
 - AI-powered cart summary using an LLM API
-- Product browsing and categories
+- Product browsing
 - Shopping cart with item quantities
-- User authentication (login, signup, logout)
-- Clean Django template frontend
+- User authentication (login, signup)
 
 ---------------------------------------
 🛠️ Tech Stack
@@ -19,7 +18,6 @@ This project is being built as a hands-on way to practice full-stack web develop
 Frontend:
 - HTML (Django Templates)
 - CSS (Tailwind planned)
-- Optional small JavaScript
 
 Backend:
 - Python
@@ -62,13 +60,6 @@ python manage.py migrate
 
 6. Start the development server
 python manage.py runserver
-
----------------------------------------
-📌 Project Status
-
-This project is currently in the early development phase.
-The base Django setup, PostgreSQL configuration, and initial app structure are complete.
-Models, views, templates, and the AI feature will be implemented next.
 
 ---------------------------------------
 📄 License
