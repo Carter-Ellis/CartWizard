@@ -35,29 +35,7 @@ Tools:
 - Python virtual environment (venv)
 
 ---------------------------------------
-🏗️ Project Structure (Current)
 
-CartWizard/
-    manage.py
-    README.md
-    venv/
-
-    cartwizard/
-        settings.py
-        urls.py
-        asgi.py
-        wsgi.py
-        __init__.py
-
-    shop/
-        models.py
-        views.py
-        admin.py
-        apps.py
-        tests.py
-        migrations/
-
----------------------------------------
 🔧 Setup Instructions
 
 1. Create and activate a virtual environment
