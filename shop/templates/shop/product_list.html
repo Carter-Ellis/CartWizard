@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<h1>Products</h1>
+
+<div class="product-grid">
+    {% for product in products %}
+        <a href="{% url 'product_details' product.slug %}" class="product-card">
+            <h2>{{ product.name }}</h2>
+
+            <p class="price">${{ product.price }}</p>
+
+            <p class="description">
+                {{ product.description|truncatewords:12 }}
+            </p>
+        </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

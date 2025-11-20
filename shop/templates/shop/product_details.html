@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+
+<div class="product-detail-card">
+
+    <h1 class="product-title">{{ product.name }}</h1>
+
+    <p class="product-price">${{ product.price }}</p>
+
+    <p class="product-description">{{ product.description }}</p>
+
+    {% if product.category %}
+        <p class="product-category">
+            <strong>Category:</strong> {{ product.category.name }}
+        </p>
+    {% endif %}
+
+    <form action="{% url 'add_to_cart' product.slug %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="button add-to-cart-btn">Add to Cart</button>
+    </form>
+
+</div>
+
+{% endblock %}

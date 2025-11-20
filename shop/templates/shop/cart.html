@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Your Cart{% endblock %}
+
+{% block content %}
+<h1>Your Cart</h1>
+
+{% if items %}
+    {% for item in items %}
+        <div class="card">
+            <strong>{{ item.product.name }}</strong><br>
+            Quantity: {{ item.quantity }}<br>
+            Price: ${{ item.total_price }}
+        </div>
+        
+        <form action="{% url 'remove_from_cart' item.id %}" method="POST" style="margin-top:10px;">
+        {% csrf_token %}
+        <button type="submit" class="button danger-btn">Remove</button>
+    </form>
+    {% endfor %}
+
+    <h2>Total: ${{ total }}</h2>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+
+<a href="{% url 'product_list' %}" class="button">Continue Shopping</a>
+
+<form action="{% url 'ai_recipe' %}" method="POST" class="ai-form">
+    {% csrf_token %}
+    <button type="submit" class="button ai-btn">
+        CartWizard
+    </button>
+</form>
+
+{% if ai_response %}
+    <div class="ai-container">
+        <h2>🧙‍♂️ CartWizard 🛒</h2>
+        <p>{{ ai_response }}</p>
+    </div>
+{% endif %}
+
+{% endblock %}
+
+
+
