@@ -1,22 +1,22 @@
 🛒 CartWizard 🧙‍♂️
 AI-Powered Supermarket Web Application (Python, Django, PostgreSQL)
 
-🚀 CartWizard is a full-stack supermarket web application built with Python, Django, and PostgreSQL. It allows users to browse products, add items to their cart, and includes an AI-powered cart summary using an LLM API to suggest recipes.
-This project is being built as a hands-on way to practice full-stack web development, database modeling, Python OOP, and AI integration.
+🚀 CartWizard is a full-stack supermarket web application built with Python, Django, and PostgreSQL. Users can browse products, manage a shopping cart, and receive AI-generated recipe suggestions powered by the OpenAI API (GPT-4o-mini).
+This project serves as a hands-on exploration of full-stack development, database modeling, Python OOP, and practical AI integration.
 
 ---------------------------------------
 🧠 Features
 
-- AI-powered cart summary using an LLM API
-- Product browsing
-- Shopping cart with item quantities
-- User authentication (login, signup)
+- 🥘 AI-powered recipe suggestions using the OpenAI API
+- 🛍️ Product browsing
+- 🛒 Shopping cart with item quantities
+- 🔐 User authentication (login, signup)
 
 ---------------------------------------
 🛠️ Tech Stack
 
 Frontend:
-- HTML (Django Templates)
+- HTML
 - CSS
 
 Backend:
@@ -60,8 +60,29 @@ python manage.py migrate
 
 6. Start the development server
 python manage.py runserver
+-----------------------------------------
+🛒 Adding Products Through the Admin Panel
 
----------------------------------------
-📄 License
+CartWizard currently manages products and inventory through Django’s built-in admin interface. This allows you to easily create, update, and delete products without needing a frontend form.
 
-This project is intended for educational and portfolio use.
+✔️ Steps to Add Items Using the Admin Panel
+
+1. Create a superuser (admin account): 
+  python manage.py createsuperuser
+
+2. Start the development server:
+  python manage.py runserver
+
+3. Visit the admin dashboard - Open your browser and go to:
+  http://localhost:8000/admin/
+
+4. Log in using your superuser credentials.
+
+5. In the admin panel, you’ll see sections for:
+Product
+Category
+Inventory
+CartItem
+Cart
+
+6. Click Product → Add Product to create new store items.
