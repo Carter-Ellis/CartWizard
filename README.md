@@ -60,6 +60,8 @@ python manage.py migrate
 
 6. Start the development server
 python manage.py runserver
+
+7. Go to http://localhost:8000/shop/ for the market.
 -----------------------------------------
 🛒 Adding Products Through the Admin Panel
 
