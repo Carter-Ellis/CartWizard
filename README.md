@@ -17,7 +17,7 @@ This project is being built as a hands-on way to practice full-stack web develop
 
 Frontend:
 - HTML (Django Templates)
-- CSS (Tailwind planned)
+- CSS
 
 Backend:
 - Python
